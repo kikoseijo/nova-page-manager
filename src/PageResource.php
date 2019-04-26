@@ -58,6 +58,7 @@ class PageResource extends Resource
 
             Select::make(__('Template'), 'template')
                 ->options(array_combine($this->getTemplates(), $this->getTemplates()))
+                ->rules('required')
                 ->onlyOnForms(),
 
             Text::make(__('Name'), 'name')
